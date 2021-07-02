@@ -5,18 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Moon-Miner</title>
+    <title>Moony-Miner</title>
 </head>
 
 <body>
 
-    <header class="container-fluid"></header>
-    <main class="container"></main>
+    <header class="container-fluid">
+        <div class="row text-center h-100 w-100">
+            <div class="col ">
+                <div class="">
+                    <h1>MOONY MINER</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-4">
+                <h2>UPGRADES</h2>
+                <div class="card w-100">
+                    <ul class="list-group list-group-flush d-flex">
+                        <li class="list-group-item">Shovels:50</li>
+                        <li class="list-group-item">Robotic arms:200</li>
+                        <li class="list-group-item">Moon Monsters:1000</li>
+                        <li class="list-group-item p-1">Chuck Norris:2500<button type="button"
+                                class="btn btn-secondary">get</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="p-3 m-5"><img src="//placehold.it/300x300" alt="" onclick="mine()"></div>
+            </div>
+            <div class="col-4">
+                <h2>USER</h2>
+                <div class="card w-100">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cheese: <span id="count">0</span></li>
+                        <li class="list-group-item">Shovels: <span id="shovel">0</span></li>
+                        <li class="list-group-item">Robotic arms: <span id="arms">0</span></li>
+                        <li class="list-group-item">Moon Monsters: <span id="monster">0</span></li>
+                        <li class="list-group-item">Chuch Norris: <span id="chuck">0</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer class="container-fluid"></footer>
 
-    <script href="app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

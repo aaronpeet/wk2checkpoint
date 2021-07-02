@@ -1,0 +1,31 @@
+h1 {
+    color: rgb(235, 161, 23);
+    text-shadow: 1px 1px black;
+    font-size: 100px;
+}
+
+h2 {
+    color: rgb(235, 161, 23);
+    text-shadow: 1px 1px black;
+    font-size: 75px;
+}
+
+body {
+    background-image: url('https://cdn.dribbble.com/users/1162077/screenshots/4382009/animated-pattern.gif');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Major Mono Display',
+        monospace;
+}
+
+header {
+    height: 20vh;
+    flex-grow: 1;
+}
+
+main {
+    flex-grow: 1;
+    height: 80vh;
+}
