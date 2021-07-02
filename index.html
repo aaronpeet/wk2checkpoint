@@ -31,10 +31,13 @@
             <div class="col-4">
                 <h2>UPGRADES</h2>
                 <div class="card w-100">
-                    <ul class="list-group list-group-flush d-flex">
-                        <li class="list-group-item">Shovels:50</li>
-                        <li class="list-group-item">Robotic arms:200</li>
-                        <li class="list-group-item">Moon Monsters:1000</li>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Shovels:50<button type="button" class="btn btn-secondary"
+                                onclick="buyShovel()">get</button></li>
+                        <li class="list-group-item">Robotic arms:200<button type="button"
+                                class="btn btn-secondary">get</button></li>
+                        <li class="list-group-item">Moon Monsters:1000<button type="button" class="btn btn-secondary"
+                                onclick="buyMonster()">get</button></li>
                         <li class="list-group-item p-1">Chuck Norris:2500<button type="button"
                                 class="btn btn-secondary">get</button></li>
                     </ul>
@@ -48,10 +51,10 @@
                 <div class="card w-100">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Cheese: <span id="count">0</span></li>
-                        <li class="list-group-item">Shovels: <span id="shovel">0</span></li>
-                        <li class="list-group-item">Robotic arms: <span id="arms">0</span></li>
-                        <li class="list-group-item">Moon Monsters: <span id="monster">0</span></li>
-                        <li class="list-group-item">Chuch Norris: <span id="chuck">0</span></li>
+                        <li class="list-group-item">Shovels: <span id="shovelCount">0</span></li>
+                        <li class="list-group-item">Robotic arms: <span id="armsCount">0</span></li>
+                        <li class="list-group-item">Moon Monsters: <span id="monsterCount">0</span></li>
+                        <li class="list-group-item">Chuch Norris: <span id="chuckCount">0</span></li>
                     </ul>
                 </div>
             </div>
