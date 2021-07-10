@@ -26,10 +26,10 @@ let automaticUpgrades = {
 }
 
 let cheese = 0
-let shovel = 0
-let arm = 0
-let monster = 0
-let chuck = 0
+//let shovel = 0
+//let arm = 0
+//let monster = 0
+//let chuck = 0
 
 function mine() {
     cheese = cheese + 1
@@ -45,11 +45,18 @@ function buyShovel() {
         update()
      }
     document.getElementById('shovelCount').innerText = clickUpgrades.shovels.quantity
+    return shovels.quantity
 }
 
-function purchMonster() {
-    if (cheese >= automaticUpgrades.monster.price) {
-        cheese = cheese - automaticUpgrades.monster.price
+function clickUpgade() {
+    if (shovel = 1) {
+        mine() * 2
+    }
+}
+
+function buyMonster() {
+    if (cheese >= automaticUpgrades.monsters.price) {
+        cheese = cheese - automaticUpgrades.monsters.price
     }
 }
 
