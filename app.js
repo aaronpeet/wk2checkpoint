@@ -8,7 +8,7 @@ let clickUpgrades = {
     arms: {
         price: 10,
         quantity: 0,
-        multiplier: 4
+        multiplier: 2
     }
 }
 
@@ -26,18 +26,23 @@ let automaticUpgrades = {
 }
 
 let cheese = 0
-//let shovel = 0
-//let arm = 0
-//let monster = 0
-//let chuck = 0
 
 function mine() {
-         cheese += 1
+    if (clickUpgrades.shovels.quantity >= 1) {
+        cheese = cheese + (2 * clickUpgrades.shovels.quantity)
+    }
+    if (clickUpgrades.arms.quantity >= 1) {
+        cheese = cheese + (4 * clickUpgrades.arms.quantity)
+    }
+    else {
+        cheese += 1
+    }
     
     document.getElementById('count').innerText = cheese
     update()
-    return cheese
+  
 }
+
 
 
 function buyShovel() {
@@ -45,10 +50,12 @@ function buyShovel() {
         clickUpgrades.shovels.quantity += 1
         cheese -= clickUpgrades.shovels.price
         update()
+    
      }
     document.getElementById('shovelCount').innerText = clickUpgrades.shovels.quantity
-    return shovels.quantity
+    //clickMultiplier()
 }
+
 
 function buyArms() {
     if (cheese >= clickUpgrades.arms.price) {
@@ -57,7 +64,7 @@ function buyArms() {
         update()
      }
     document.getElementById('armCount').innerText = clickUpgrades.arms.quantity
-    return arms.quantity
+
 }
 
 function buyMonster() {
@@ -67,7 +74,7 @@ function buyMonster() {
         update()
      }
     document.getElementById('monsterCount').innerText = automaticUpgrades.monsters.quantity
-    return monsters.quantity
+   
 }
 
 function buyChuck() {
@@ -77,12 +84,18 @@ function buyChuck() {
         update()
      }
     document.getElementById('chuckCount').innerText = automaticUpgrades.chucks.quantity
-    return chucks.quantity
+
 }
+
+/*function clickMultiplier() {
+    (clickUpgrades.quantity * clickUpgrades.multiplier) = clickUpgrades.price
+    
+    document.getElementById('shovelPrice').innerText = clickUpgrades.shovels.price
+}*/
 
 
 function update() {
-    cheese = cheese
+   
     document.getElementById('count').innerText = cheese
 }
 
