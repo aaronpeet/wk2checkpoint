@@ -27,21 +27,41 @@ let automaticUpgrades = {
 
 let cheese = 0
 
-function mine() {
-    if (clickUpgrades.shovels.quantity >= 1) {
-        cheese = cheese + (2 * clickUpgrades.shovels.quantity)
-    }
+
+
+function armMine() {
+    
     if (clickUpgrades.arms.quantity >= 1) {
         cheese = cheese + (4 * clickUpgrades.arms.quantity)
-    }
-    else {
-        cheese += 1
-    }
-    
+        }
     document.getElementById('count').innerText = cheese
     update()
   
 }
+
+
+function shovelMine() {
+    if (clickUpgrades.shovels.quantity >= 1) {
+        cheese = cheese + (2 * clickUpgrades.shovels.quantity)
+    } else {
+        cheese += 1
+    }
+       
+    document.getElementById('count').innerText = cheese
+        update()
+}
+
+
+function collectAutoUpgrades() {
+    if (automaticUpgrades.monsters.quantity >= 1) {
+        setInterval(() => { (cheese = cheese + (1000 * automaticUpgrades.monsters.quantity)); }, 3000);
+    }
+    /*   setInterval (cheese = cheese + (2500 * automaticUpgrades.chucks.quantity), 5000)
+    }*/
+    document.getElementById('count').innerText = cheese
+}
+
+
 
 
 
@@ -49,11 +69,12 @@ function buyShovel() {
     if (cheese >= clickUpgrades.shovels.price) {
         clickUpgrades.shovels.quantity += 1
         cheese -= clickUpgrades.shovels.price
+        clickUpgrades.shovels.price = (clickUpgrades.shovels.price * clickUpgrades.shovels.multiplier)
         update()
     
      }
     document.getElementById('shovelCount').innerText = clickUpgrades.shovels.quantity
-    //clickMultiplier()
+    document.getElementById('shovelPrice').innerText = clickUpgrades.shovels.price
 }
 
 
@@ -87,11 +108,6 @@ function buyChuck() {
 
 }
 
-/*function clickMultiplier() {
-    (clickUpgrades.quantity * clickUpgrades.multiplier) = clickUpgrades.price
-    
-    document.getElementById('shovelPrice').innerText = clickUpgrades.shovels.price
-}*/
 
 
 function update() {

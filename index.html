@@ -27,34 +27,38 @@
         </div>
     </header>
     <main class="container-fluid">
-        <div class="row align-items-center">
+        <div class="row align-items-center w-100">
             <div class="col-4">
                 <h2>UPGRADES</h2>
                 <div class="card w-100">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Shovels:<span id="shovelPrice">5</span><button type="button"
-                                class="btn btn-secondary" onclick="buyShovel()">get</button></li>
-                        <li class="list-group-item">Robotic arms:10<button type="button" class="btn btn-secondary"
-                                onclick="buyArms()">get</button></li>
-                        <li class="list-group-item">Moon Monsters:15<button type="button" class="btn btn-secondary"
-                                onclick="buyMonster()">get</button></li>
-                        <li class="list-group-item p-1">Chuck Norris:20<button type="button" class="btn btn-secondary"
+                        <li class="list-group-item">Shovels:<span id="shovelPrice">50</span><button type="button"
+                                class="btn btn-secondary m-3" onclick="buyShovel()">get</button></li>
+                        <li class="list-group-item">Robotic arms:<span id="armPrice">100</span><button type="button"
+                                class="btn btn-secondary m-3" onclick="buyArms()">get</button></li>
+                        <li class="list-group-item">Moon Monsters:15<button type="button" class="btn btn-secondary m-3"
+                                onclick="buyMonster();collectAutoUpgrades();">get</button></li>
+                        <li class="list-group-item">Chuck Norris:20<button type="button" class="btn btn-secondary m-3"
                                 onclick="buyChuck()">get</button></li>
                     </ul>
                 </div>
             </div>
             <div class="col-4">
-                <div class="p-3 m-5"><img src="//placehold.it/300x300" alt="" onclick="mine()"></div>
+                <div class="p-3 m-5"><img src="moon.png" alt="" onclick="shovelMine(); armMine(); mine();"></div>
             </div>
             <div class="col-4">
                 <h2>PLAYER</h2>
                 <div class="card w-100">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cheese: <span id="count">0</span></li>
-                        <li class="list-group-item">Shovels: <span id="shovelCount">0</span></li>
-                        <li class="list-group-item">Robotic arms: <span id="armCount">0</span></li>
-                        <li class="list-group-item">Moon Monsters: <span id="monsterCount">0</span></li>
-                        <li class="list-group-item">Chuck Norris: <span id="chuckCount">0</span></li>
+                        <li class="list-group-item">cheese: <span id="count">0</span></li>
+                        <li class="list-group-item">shovels: <span id="shovelCount">0</span>------- x2</li>
+                        <li class="list-group-item">robotic arms: <span id="armCount">0</span> ------- x4</li>
+                        <li class="list-group-item">moon monsters: <span id="monsterCount">0</span> ------- +1000(per 3
+                            sec)
+                        </li>
+                        <li class="list-group-item">chuck norris: <span id="chuckCount">0</span> ------- +2500(per 3
+                            sec)
+                        </li>
                     </ul>
                 </div>
             </div>

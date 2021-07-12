@@ -10,6 +10,10 @@ h2 {
     font-size: 75px;
 }
 
+img {
+    width: 300px;
+}
+
 body {
     background-image: url('https://cdn.dribbble.com/users/1162077/screenshots/4382009/animated-pattern.gif');
     background-size: cover;
