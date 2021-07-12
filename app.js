@@ -52,13 +52,11 @@ function shovelMine() {
 }
 
 
-/*function collectAutoUpgrades() {
-    if (automaticUpgrades.monsters.quantity >= 1) {
-        setInterval(() => { (cheese = cheese + (1000 * automaticUpgrades.monsters.quantity)); }, 3000);
-    }
-
+function collectAutoUpgrades() {
+    cheese = cheese + (1000 * automaticUpgrades.monsters.quantity)
+    cheese = cheese + (2500 * automaticUpgrades.chucks.quantity)
     document.getElementById('count').innerText = cheese
-}*/
+}
 
 
 
@@ -118,3 +116,4 @@ function update() {
     document.getElementById('count').innerText = cheese
 }
 
+setInterval(collectAutoUpgrades, 3000)
